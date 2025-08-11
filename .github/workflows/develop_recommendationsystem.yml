@@ -62,12 +62,16 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_D659ADC1EEFF4CDD8562D6F979E07771 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_CF77AC0BE9064D319B41E301781F9ABF }}
 
+       - name: Set startup command for Azure
+        run: |
+          echo "gunicorn -w 4 -b 0.0.0.0:8000 app:app" > "sustav preporuka/servis/startup.txt"
+
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
           app-name: 'RecommendationSystem'
           slot-name: 'Production'
-          package: 'servis'
-
+          package: 'sustav preporuka/servis'
           
+
