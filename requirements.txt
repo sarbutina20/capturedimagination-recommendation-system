@@ -1,0 +1,8 @@
+Flask
+gunicorn
+numpy
+pandas
+tensorflow
+pymongo
+python-dotenv
+bson
