@@ -1,0 +1,26 @@
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.env
+
+.vscode/
+
+sustav preporuka/servis/data/
+!sustav preporuka/servis/data/.gitkeep
+
+.ipynb_checkpoints/
+
+.DS_Store
+Thumbs.db
+
+.env.*
+*.env
+
+*.log
+
+venv/
+env/
+.svn/
