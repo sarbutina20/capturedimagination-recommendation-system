@@ -114,7 +114,7 @@ def get_recommendations(user_id):
 
     final_scores = GAMMA * content_scores + (1.0 - GAMMA) * user_scores
 
-    topk = 20
+    topk = 21
     if top_cats_set:
         in_cat = [i for i, isbn in enumerate(unique_isbns)
                   if allowed_mask[i] and any(cat in top_cats_set for cat in book_categories.get(isbn, []))]
@@ -169,4 +169,5 @@ def debug_user(user_id):
         return jsonify({"error": str(e)})
 
 if __name__ == "__main__":
+    print("Server je pokrenut na portu 5001")
     app.run(port=5001, debug=False)

@@ -52,5 +52,5 @@ def load_all():
         "location_map": location_map,
         "unique_isbns": unique_isbns,
         "all_book_embeddings": all_book_embeddings,
-        "book_categories": book_categories  # <-- added
+        "book_categories": book_categories 
     }
