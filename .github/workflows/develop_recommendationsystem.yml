@@ -67,10 +67,10 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'RecommendationSystem'
-          slot-name: 'Production'
-          package: './servis'
-          startup-command: 'gunicorn --bind=0.0.0.0 --timeout 600 app:app' 
+          package: '.'
+          startup-command: 'gunicorn --bind=0.0.0.0 --timeout 600 servis.app:app' 
           
+
 
 
 
