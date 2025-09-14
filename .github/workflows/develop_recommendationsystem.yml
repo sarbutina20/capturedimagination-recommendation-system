@@ -68,10 +68,3 @@ jobs:
         with:
           app-name: 'RecommendationSystem'
           package: '.'
-          startup-command: 'gunicorn --bind=0.0.0.0 --timeout 600 --chdir servis app:app' 
-          
-
-
-
-
-
